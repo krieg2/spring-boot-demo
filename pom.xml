@@ -17,12 +17,23 @@
 
 	<properties>
 		<java.version>18</java.version>
+		<start-class>com.example.springboot.Application</start-class>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
 		<!-- tag::actuator[] -->
@@ -54,8 +65,8 @@
                           <configuration>
                             <url>http://localhost:8080/manager/text</url>
                             <server>tomcat</server>
-                            <username></username>
-                            <password></password>
+                            <username>admin1</username>
+                            <password>admin333!</password>
                             <path>/${project.artifactId}</path>
                             <update>true</update>
                           </configuration>

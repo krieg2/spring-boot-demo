@@ -17,8 +17,19 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	// end::actuator[]
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// Lombok dependency for code compilation
+    compileOnly 'org.projectlombok:lombok:1.18.36'
+    // Lombok annotation processor for code generation
+    annotationProcessor 'org.projectlombok:lombok:1.18.36'
+
+	// JPA
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
 	// tag::tests[]
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	testCompileOnly 'org.projectlombok:lombok:1.18.36'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.36'
 	// end::tests[]
 }
 
